@@ -1,0 +1,24 @@
+Analisis
+
+bool empty(); 				Complejidad O(1)
+
+int size();					Complejidad O(1)
+
+int front();				Complejidad O(1)
+
+int back();					Complejidad O(1)
+
+void push_front(int);		Complejidad O(1)
+
+void push_back(int);		Complejidad O(1)
+
+void pop_front();			Complejidad O(1)
+
+void pop_back();			Complejidad O(1)
+
+
+Todos los metodos tienen complejidad constante
+
+La ventaja de una lista doblemente enlazada es que al hacer pop, no es necesario recorrer 
+la lista completamente para saber cual sera el ultimo elemento, ya que tendremos un puntero
+que esta apuntando al nodo anterior siempre

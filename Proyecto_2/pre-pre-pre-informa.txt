@@ -1,0 +1,89 @@
+Introducción:
+	Nos mandaron a hacer un árbol bonito que tiene 4 hojillas, el chiste esque la baina busca re rapido porque basicamente para insertar o borrar o buscar
+	se chinga 3/4 de la región y busca o lo que sea en una sola sub-región.
+
+::: Los x parte de 0 a un xmax y los mismo con los y, seria como
+1) explicar todo esto
+  Abalisis Teorico sobre el método insertar O(log n).
+  Abalisis Teorico sobre el método buscar O(log n).
+  Abalisis Teorico sobre el método borrar O(log n).
+  Abalisis Teorico sobre el método size   O(1).
+3)
+Analisis Experimental::
+	hacer el expiremento a la vuelta
+	como hay que ver la eficencia de buscar(), buscamos un punto al 
+	espacio pequeño(16,16)::
+		:.con un imput chico(n=5):PRQuadTree::2e^(-6)(seg).
+					  ArregloDesordenado::1e^(-6)(seg).
+
+		:.con un imput mediano(n=10):PRQuadTree::2e^(-6)(seg).
+					     ArregloDesordenado::1e^(-6)(seg).
+
+		:.con un imput grande(n=15):PRQuadTree::2e^(-6)(seg).
+					    ArregloDesordenado::1e^(-6)(seg).
+
+	Nota:	Al ser una región pequeña,no se presentan mayores diferencias de buscar un punto
+		que este o no contenido en el arbol o el arreglo desordenado o en el caso que se busque
+		un punto que este al inicio o al final del respectivo arbol o arreglo.
+
+	espacio mediano(64,64)::
+		:.con un imput chico(n=7):PRQuadTree::2e^(-6)(seg).
+					  ArregloDesordenado::1e^(-6)(seg).
+
+		:.con un imput mediano(n=30):PRQuadTree::1e^(-6)(seg).
+					     ArregloDesordenado::1e^(-6)(seg).
+
+		:.con un imput grande(n=60):PRQuadTree::1e^(-6)(seg).
+					    ArregloDesordenado::1e^(-6)(seg).
+	
+	Nota:	Con n=7,n=30 y n=60 no se presentan mayores discrepancias si se intenta buscar un punto que 
+		este o no contenido en toda la región, ádemas de diferencias despreciables con respecto a la 
+		busqueda de un punto al inicio o final del respectivo arbol o arreglo.
+	
+	espacio grande (128,128)::
+		:.con un imput chico(n=40):PRQuadTree::1e^(-6)(seg).
+					  ArregloDesordenado::1e^(-6)(seg).
+
+		:.con un imput mediano(n=70):PRQuadTree::1e^(-6)(seg).
+					     ArregloDesordenado::1e^(-6)(seg).
+
+		:.con un imput grande(n=120):PRQuadTree::1e^(-6)(seg).
+					    ArregloDesordenado::1e^(-6)(seg).
+	Nota: La diferencia no se esta percibiendo, los puntos y los cuadrantes que se estan generando
+	      estan dejando mal esto, dios mio de mi alma
+
+	256x256 n=1000 bucar un elemeno no existente
+		arbol 1e-06(seg)
+		arreglo 5e-06(seg) // lo mismo
+
+	512x512 n=10000 
+	elemento existente
+		arbol 1e-06
+		arreglo 5.5e-05
+	elemento no existente
+		arbol 1e-06
+		arreglo	6.2e-05
+
+	1024x1024 n=100000 
+	elemento existente
+		arbol 2e-06
+		arreglo 0.000265
+	elemento no existente
+		arbol 2e-06
+		arreglo	0.000494
+	4096x4096 n=150000
+	elemento existente
+		arbol 5.2e-05
+		arreglo 0.00086
+	elemento no existente
+		arbol 4.4e-05
+		arreglo	0.000975
+
+4)la baina de que es mejor
+formulo pedazo de hipotesis que dice que si la baina esta bien distribuida en el arbol sera mas rapido que tu hermana que cuando se abre de piernas
+en cambia si todos los puntos esta dentro de un solo sub cuadrante y ellos de igual forma dentro de otro sub cuadrante, entonces la baina del arbol
+es una verdadera mrd porque es una pinche lista enlazada simpre que no sirve de nada,lo que lleva a que el arreglo chanta sea re pro 
+porque es la misma mierda, ver puntito por puntito si estoy, en el peor caso en ambas implementaciones estara al final y nos chupa un huevo
+ahora tengo que provar esto.
+
+5)ni chinga madre de como se hace

@@ -1,0 +1,33 @@
+4) Analisis complejidad
+
+Para ArrayList
+
+		Algoritmo							Complejidad(tiempo)
+
+virtual void push_back(int n)						O(1)	
+virtual int at(int n)								O(1)
+virtual int size()									O(1)
+
+Para LinkedList					
+
+virtual void push_back(int n)						O(1)	
+virtual int at(int n)								O(n/2)
+virtual int size()									O(1)
+
+
+
+
+
+5) ¿Cuál crees que es la mejor implementación para la ADT List?
+
+LinkedList permite eliminar e insertar elementos en tiempo constante usando iteradores, pero el 
+acceso es secuencial por lo que encontrar un elemento toma un tiempo proporcional al tamaño de 
+la lista.
+Normalmente la complejidad de esa operación promedio sería O(n/2) sin embargo usar una lista
+doblemente ligada el recorrido puede ocurrir desde el principio o el final de la lista por lo
+tanto resulta en O(n/4).
+
+ArrayList ofrece acceso en tiempo constante O(1), pero si quieres añadir o remover un elemento 
+en cualquier posición que no sea la última es necesario mover elementos. Además si el arreglo
+ya está lleno es necesario crear uno nuevo con mayor capacidad y copiar los elementos 
+existentes.

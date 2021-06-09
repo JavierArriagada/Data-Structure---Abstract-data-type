@@ -1,0 +1,9 @@
+Analisis de complejidad
+
+insert(int) = O(logn)
+
+remove() = O(logn)
+
+size() = O(1) 
+
+min() = O(1) 

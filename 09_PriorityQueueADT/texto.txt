@@ -1,0 +1,17 @@
+Analisis teorico::
+•Heap_Sort()::La funcion Heap_Sort() llama n veces a la funcion top() y pop() de la libreria PQHeap
+	      que son O(log n) y O(log n) respectivamente, por lo que ordenar n elementos toma un tiempo asintotico 
+	      O(n*log n) realizar n vecez 2log n por el top() y pop().
+
+•Selection_Sort()::La funcion Selection_Sort() llama n veces a la funcion top() y pop() de la libreria PQUnsorted
+	      	   que son O(n) y O(n) respectivamente, por lo que ordenar n elementons toma un tiempo 
+		   asintotio O(n*n) realizar n vecez 2n por el top() y el pop(). 
+
+Analisis experimental::
+Con un n=10000(1) y n=30000(2).
+llenado de los arreglos a introducir en las funciones rand()%10000.
+•Heap_Sort:: (1)Tiempo:0.121713(seg).
+	     (2)Tiempo:1.00419(seg).
+
+•Selection_Sort:: (1)Tiempo:0.144141(seg).
+		  (2)Tiempo:1.23138(seg).

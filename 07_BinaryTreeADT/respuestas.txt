@@ -1,0 +1,8 @@
+1) 
+insertar de forma ordenada siempre es O(n). 
+De forma aleatoria la complejidad es la misma O(n), pero esto en el peor caso, que vendria siendo ordenados
+ 
+2)
+En una arbol binario, cada nodo tiene a lo mas 2 hijos
+Esta balanceado si cada nivel arriba del ultimo esta lleno
+

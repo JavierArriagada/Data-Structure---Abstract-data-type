@@ -1,0 +1,41 @@
+Analisis complejidad QueueADT
+
+
+Metodo empty();
+	Su complejidad en tiempo siempre será O(1), ya que solo preguntara el valor de una variable
+
+
+Metodo size();
+	Su complejidad en tiempo siempre será O(1), ya que solo preguntara el valor de una variable
+
+	
+
+Metodo front();
+En el peor de los casos, cuando el stack2 está vacío.
+	Su complejidad en tiempo es O(n), porque debera copiar todo lo del stack1 al stack2.
+
+En el mejor de los casos, cuando el stack2 NO está vacío.
+	Su complejidad en el tiempo es O(1), ya que solo debera devolver el valor del ultimo elemento del stack2. 
+
+	
+
+Metodo back();
+En el peor de los casos, cuando el stack1 está vacío.
+	Su complejidad en el tiempo es O(n), porque debera copiar todo lo del stack2 al stack1.
+
+En el mejor de los casis, cuando el stack1 No está vacío.
+	Su complejidad en el tiempo es O(1), ya que solo debera devolver el valor del ultimo elemento del stack2.
+
+
+
+Metodo push(int);
+	Su complejidad en el tiempo es O(1), solo agrega elementos al stack1.
+
+
+	
+Metodo pop();
+En el peor de los casos, cuando el stack2 está vacío.
+	Su complejidad en el tiempo es O(n), porque debera copiar todo lo del stack1 al stack2.
+
+En el mejor de los casos, cuando el stack2 No está vacío.
+	Su complejidad en el tiempo es O(1), ya que solo debera eliminar el ultimo elemento del stack2.  
